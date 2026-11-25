@@ -1,11 +1,13 @@
 .toggle-card {
     background: rgb(249 243 221 / 20%);
     width: 340px;
-    border: 1px solid lightslategray;
-    border-radius: 10px;
 
     > div {
+        border: 1px solid lightslategray;
+        border-radius: 10px;
         position: relative;
+        transform-style: preserve-3d;
+        transition: all 0.5s ease-out;
     }
 
     > div div:first-child img {
@@ -48,18 +50,52 @@
             width: 100%;
             display: flex;
             justify-content: center;
-            background: rgb(74 139 230);
+            background: var(--color-primary);
             font-size: 1rem;
             border-radius: 6px;
-            color: white;
+            color: var(--color-white);
         }
     }
 
     > div div:nth-child(3 of div) {
         position: absolute;
+        background: rgb(249 243 221 / 100%);
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
+        text-align: center;
+        font-size: 18px;
         transform: rotateY(180deg);
         backface-visibility: hidden;
+        border-radius: 10px;
+        padding: 22px 18px;
+    }
+
+    .btn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background: var(--color-primary);
+        font-size: 1rem;
+        border-radius: 6px;
+        border: 2px solid transparent;
+        color: var(--color-white);
+        transition:
+            background 0.25s ease,
+            color 0.25s ease;
+        cursor: pointer;
+    }
+
+    @media (hover: hover) {
+        .btn:hover {
+            background: var(--color-white);
+            color: var(--color-primary);
+            border: 2px solid var(--color-primary);
+        }
+    }
+
+    .flip {
+        transform: rotateY(180deg);
     }
 }
