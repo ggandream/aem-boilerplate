@@ -1,0 +1,33 @@
+.earth {
+    background-color: plum;
+
+    .card-content {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        border: 1px solid #ccc;
+    }
+
+    img {
+        vertical-align: top;
+    }
+
+    .last-paragraph {
+        margin-top: 32px;
+    }
+
+    /* > div{
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        border: 1px solid #ccc;
+
+        > div:last-child > p:last-child{
+            margin-top: 32px;
+        }
+    }
+
+    img{
+        vertical-align: top;
+    } */
+}
